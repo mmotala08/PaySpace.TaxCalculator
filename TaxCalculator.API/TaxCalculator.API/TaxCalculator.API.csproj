@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TaxCalculator.DataAccess\TaxCalculator.DataAccess.csproj" />
+    <ProjectReference Include="..\TaxCalculator.Services\TaxCalculator.Services.csproj" />
+    <ProjectReference Include="..\TaxCalculatorServices.Abstractions\TaxCalculatorServices.Abstractions.csproj" />
+  </ItemGroup>
+
+
+</Project>

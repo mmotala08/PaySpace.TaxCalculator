@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TaxCalculator.BusinessLogic\TaxCalculator.BusinessLogic.csproj" />
+    <ProjectReference Include="..\TaxCalculator.Domain\TaxCalculator.Domain.csproj" />
+    <ProjectReference Include="..\TaxCalculatorServices.Abstractions\TaxCalculatorServices.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,33 @@
+﻿@page
+@model TaxCalculator.Web.Pages.TaxCalculatorModel
+@{
+}
+
+<div class="text-center">
+    <h1 class="display-4">Tax Calculator</h1>
+
+    @if (Model.ErrorMessage != null)
+    {
+        <div class="alert alert-danger">@Model.ErrorMessage</div>
+    }
+
+    <form method="post">
+        <div class="form-group">
+            <label for="postalCode">Postal Code:</label>
+            <input maxlength="4" type="text" class="form-control" id="postalCode" name="PostalCode" required>
+        </div>
+        <div class="form-group">
+            <label for="annualIncome">Annual Income:</label>
+            <input min="1" type="number" class="form-control" id="annualIncome" name="AnnualIncome" required>
+        </div>
+        <div class="row">  
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </div>
+
+    </form>
+
+    @if (Model.TaxAmount.HasValue)
+    {
+        <h2>Your tax amount is: R @String.Format("{0:0.00}",@Model.TaxAmount)</h2>
+    }
+</div>
