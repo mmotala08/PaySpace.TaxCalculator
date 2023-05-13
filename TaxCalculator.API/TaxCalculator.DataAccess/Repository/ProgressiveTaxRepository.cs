@@ -29,7 +29,7 @@ namespace TaxCalculator.DataAccess.Repository
                 progressiveTaxTable = _context.ProgressiveTax.OrderBy(x => x.LowerBound).ToList();
 
 
-                // Add the items to the cache with a sliding expiration of 5 minutes.
+                // Add the items to the cache with a sliding expiration of 24 hours.
                 _cache.Set("progressiveTaxTable", progressiveTaxTable, new MemoryCacheEntryOptions
                 {
                     SlidingExpiration = TimeSpan.FromHours(24)
