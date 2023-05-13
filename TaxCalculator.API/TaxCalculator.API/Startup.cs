@@ -29,6 +29,7 @@ namespace TaxCalculator.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddMemoryCache();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddServices();
             services.AddBusinessLogic();
